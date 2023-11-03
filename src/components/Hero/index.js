@@ -2,8 +2,10 @@ import { sriracha } from "@/fonts/fonts";
 import style from "./style.module.scss";
 import Image from "next/image";
 import heroImage from "../../assets/Hero_Banner.svg";
+import heroImage2 from "../../assets/Hero_Banner_2.svg";
 import arrow from "../../assets/Arrow.svg";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
   return (
