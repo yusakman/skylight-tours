@@ -43,6 +43,7 @@ const Header = () => {
               key={index}
               href={item.url}
               onClick={() => setShowNav(!showNav)}
+              scroll={false}
             >
               <p>{item.label}</p>
             </Link>

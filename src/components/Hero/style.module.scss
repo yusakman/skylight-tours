@@ -1,0 +1,33 @@
+.hero {
+  padding-top: 100px;
+  width: 100vw;
+  min-height: calc(100vh - 130px);
+
+  @media (max-width: 991.98px) {
+    padding-top: 80px;
+  }
+  @media (max-width: 767.98px) {
+    padding-top: 10px;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-size: larger;
+
+    h1 {
+      margin-bottom: -10px;
+    }
+
+    .hero-icon-container {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100px;
+      width: 15px;
+    }
+  }
+}
