@@ -2,8 +2,9 @@
   position: fixed;
   width: 100vw;
   height: 100px;
-  background: linear-gradient(270deg, #11505d 3.38%, #307b8c 93.25%);
-  box-shadow: 0 0 5px 5px rgba($color: #000000, $alpha: 0.05);
+  transition: all 0.5s ease;
+  // background: linear-gradient(270deg, #11505d 3.38%, #307b8c 93.25%);
+  // box-shadow: 0 0 5px 5px rgba($color: #000000, $alpha: 0.05);
   z-index: 3;
   @media (max-width: 991.98px) {
     height: 80px;
@@ -95,4 +96,10 @@
       }
     }
   }
+}
+
+.header-bg {
+  background: linear-gradient(270deg, #11505d 3.38%, #307b8c 93.25%);
+  box-shadow: 0 0 5px 5px rgba($color: #000000, $alpha: 0.05);
+  
 }

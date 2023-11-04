@@ -1,5 +1,5 @@
 import style from "./style.module.scss";
-import { listCars } from "@/static/listcars";
+import { listCars } from "@/const/listcars";
 import Image from "next/image";
 import { Button } from "@mui/material";
 import Link from "next/link";

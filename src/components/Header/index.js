@@ -7,15 +7,20 @@ import { useEffect, useState } from "react";
 
 const Header = () => {
   const [showNav, setShowNav] = useState(false);
+  const [newBg, setNewBg] = useState(``);
 
   const menu = [
     {
       label: "Home",
-      url: "/",
+      url: "/#home",
     },
     {
       label: "Services",
       url: "/#services",
+    },
+    {
+      label: "Destination",
+      url: "/#destination",
     },
     {
       label: "About",
@@ -27,8 +32,22 @@ const Header = () => {
     },
   ];
 
+  useEffect(() => {
+    const checkScroll = () => {
+      const y = window.scrollY;
+      if (y >= 600) {
+        setNewBg(`header-bg`);
+      } else {
+        setNewBg(``);
+      }
+    };
+
+    window.addEventListener("scroll", checkScroll);
+  });
+
   return (
-    <div className={style.header}>
+    <div className={`${style.header} ${style[newBg]}`}>
+      {/* <div className={style.header } style={{ background: newBg }}> */}
       <div className={style.container}>
         <div className={`${sriracha.className} ${style.logo}`}>
           <h1>Skylight</h1>
