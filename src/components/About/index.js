@@ -1,4 +1,4 @@
-import style from "./style.module.scss";
+import styles from "./styles.module.scss";
 import { aboutText, imageSlider } from "@/const/about";
 import { Box, Button } from "@mui/material";
 import Image from "next/image";
@@ -39,19 +39,19 @@ const About = () => {
   }, [imageIndex]);
 
   return (
-    <div className={style.about} id="about">
+    <div className={styles.about} id="about">
       {mounted && (
         <>
-          <Box className={style[`about-text`]}>
+          <Box className={styles[`about-text`]}>
             <KayakingIcon sx={{ fontSize: 80 }} />
             <h1>About</h1>
-            <div className={style[`text-box`]}>
+            <div className={styles[`text-box`]}>
               {aboutText.map((item, index) => (
                 <p key={index}>{item}</p>
               ))}
             </div>
 
-            <Button variant="contained" className={style[`about-button`]}>
+            <Button variant="contained" className={styles[`about-button`]}>
               <Link
                 href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=Halo Skylight Tours, apakah masih available?`}
                 rel="noopener noreferrer"
@@ -61,7 +61,7 @@ const About = () => {
               </Link>
             </Button>
           </Box>
-          <Box className={style[`image-slider`]}>
+          <Box className={styles[`image-slider`]}>
             <Image
               src={imageSlider[imageIndex].imgUrl}
               alt={imageSlider[imageIndex].name}
@@ -73,13 +73,13 @@ const About = () => {
               quality={100}
             />
 
-            <Box className={style[`slider-box`]}>
-              <div className={style[`slider-title`]} id="destination">
+            <Box className={styles[`slider-box`]}>
+              <div className={styles[`slider-title`]} id="destination">
                 <p>Choose Your Destination</p>
               </div>
-              <div className={style[`slider-content`]}>
+              <div className={styles[`slider-content`]}>
                 <Image
-                  className={style[`slider-icon`]}
+                  className={styles[`slider-icon`]}
                   src={iconLeft}
                   alt="left"
                   width={50}
@@ -87,11 +87,11 @@ const About = () => {
                   quality={100}
                   onClick={prevImg}
                 />
-                <p className={style[`bg-icon-text`]}>
+                <p className={styles[`bg-icon-text`]}>
                   {imageSlider[imageIndex].name}
                 </p>
                 <Image
-                  className={style[`slider-icon`]}
+                  className={styles[`slider-icon`]}
                   src={iconRight}
                   alt="right"
                   width={50}
@@ -100,7 +100,7 @@ const About = () => {
                   onClick={nextImg}
                 />
               </div>
-              <Button variant="contained" className={style[`slider-button`]}>
+              <Button variant="contained" className={styles[`slider-button`]}>
                 <Link
                   href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${destText}`}
                   rel="noopener noreferrer"

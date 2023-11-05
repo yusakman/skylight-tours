@@ -1,0 +1,14 @@
+.footer {
+  color: #34b5cf;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .footer-email {
+    cursor: pointer;
+  }
+
+  .footer-icon:hover {
+    cursor: pointer;
+  }
+}

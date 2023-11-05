@@ -1,6 +1,6 @@
 import { sriracha } from "@/fonts/fonts";
 import Link from "next/link";
-import style from "./style.module.scss";
+import styles from "./styles.module.scss";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { useEffect, useState } from "react";
@@ -46,15 +46,14 @@ const Header = () => {
   });
 
   return (
-    <div className={`${style.header} ${style[newBg]}`}>
-      {/* <div className={style.header } style={{ background: newBg }}> */}
-      <div className={style.container}>
-        <div className={`${sriracha.className} ${style.logo}`}>
+    <div className={`${styles.header} ${styles[newBg]}`}>
+      <div className={styles.container}>
+        <div className={`${sriracha.className} ${styles.logo}`}>
           <h1>Skylight</h1>
         </div>
-        <nav className={showNav ? style.show : ""}>
+        <nav className={showNav ? styles.show : ""}>
           <CloseIcon
-            className={style.close}
+            className={styles.close}
             onClick={() => setShowNav(!showNav)}
           />
           {menu.map((item, index) => (
@@ -68,9 +67,9 @@ const Header = () => {
             </Link>
           ))}
         </nav>
-        <div className={style["nav-mobile"]}>
+        <div className={styles["nav-mobile"]}>
           <MenuIcon
-            className={style.hamburger}
+            className={styles.hamburger}
             onClick={() => setShowNav(!showNav)}
           />
         </div>
