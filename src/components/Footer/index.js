@@ -1,7 +1,7 @@
 import styles from "./styles.module.scss";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Link from "next/link";
-import { phoneNumber } from "@/const";
+import { phoneNumber, email } from "@/const";
 import { useState } from "react";
 import { Alert } from "@mui/material";
 
@@ -9,8 +9,8 @@ const Footer = () => {
   const [copied, setCopied] = useState(false);
 
   const copyCode = () => {
-    const email = `skylight@gmail.com`;
-    navigator.clipboard.writeText(email);
+    const _email = email;
+    navigator.clipboard.writeText(_email);
     setCopied(true);
     setTimeout(() => {
       setCopied(false);
