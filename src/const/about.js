@@ -1,8 +1,3 @@
-import img1 from "../assets/slide_1.svg";
-import img2 from "../assets/slide_2.svg";
-import img3 from "../assets/slide_3.svg";
-import img4 from "../assets/slide_4.svg";
-
 export const aboutText = [
   "Welcome to Skylight Tours Bali - Your Gateway to Bali's Beauty. 🌴",
   "We're not just a tour company; we're your local adventure guides. 🛴",
@@ -13,18 +8,32 @@ export const aboutText = [
 export const imageSlider = [
   {
     name: "Beach",
-    imgUrl: img1,
+    imgUrl:
+      "https://ipfs.io/ipfs/QmTbsrzFQ2bfkUuB2bsqCCANPTNjwcw8RqwFuLjUBRWt8E/1.jpg",
   },
   {
     name: "Keccak",
-    imgUrl: img2,
+    imgUrl:
+      "https://ipfs.io/ipfs/QmTbsrzFQ2bfkUuB2bsqCCANPTNjwcw8RqwFuLjUBRWt8E/2.jpg",
   },
   {
     name: "Sailing",
-    imgUrl: img3,
+    imgUrl:
+      "https://ipfs.io/ipfs/QmTbsrzFQ2bfkUuB2bsqCCANPTNjwcw8RqwFuLjUBRWt8E/3.jpg",
   },
   {
     name: "Waterfal",
-    imgUrl: img4,
+    imgUrl:
+      "https://ipfs.io/ipfs/QmTbsrzFQ2bfkUuB2bsqCCANPTNjwcw8RqwFuLjUBRWt8E/4.jpg",
+  },
+  {
+    name: "Temple",
+    imgUrl:
+      "https://ipfs.io/ipfs/QmTbsrzFQ2bfkUuB2bsqCCANPTNjwcw8RqwFuLjUBRWt8E/5.jpg",
+  },
+  {
+    name: "Sunset",
+    imgUrl:
+      "https://ipfs.io/ipfs/QmTbsrzFQ2bfkUuB2bsqCCANPTNjwcw8RqwFuLjUBRWt8E/6.jpg",
   },
 ];

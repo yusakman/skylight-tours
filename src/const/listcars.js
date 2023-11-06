@@ -1,13 +1,8 @@
-import alphard from "../assets/alphard.svg";
-import avanza from "../assets/avanza.svg";
-import hiace from "../assets/hiace.svg";
-import innova from "../assets/innova.svg";
-import xenia from "../assets/xenia.svg";
-
 export const listCars = [
   {
     name: "Toyota Alphard",
-    imageUrl: alphard,
+    imageUrl:
+      "https://ipfs.io/ipfs/QmR5U1q9sQngoHUoigBfYkJb173GeabptyoUW7GbRSeSD2/alphard.svg",
     services: [
       "IDR 2.500.000 (US$ 250)",
       "Half Day: US$ 120 / 5 Hours",
@@ -19,7 +14,8 @@ export const listCars = [
   },
   {
     name: "Toyota Hiace",
-    imageUrl: hiace,
+    imageUrl:
+      "https://ipfs.io/ipfs/QmR5U1q9sQngoHUoigBfYkJb173GeabptyoUW7GbRSeSD2/hiace.svg",
     services: [
       "IDR 1.500.000 (US$ 150)",
       "Half Day: US$ 50 / 5 Hours",
@@ -31,7 +27,8 @@ export const listCars = [
   },
   {
     name: "Toyota Innova",
-    imageUrl: innova,
+    imageUrl:
+      "https://ipfs.io/ipfs/QmR5U1q9sQngoHUoigBfYkJb173GeabptyoUW7GbRSeSD2/innova.svg",
     services: [
       "IDR 1.000.000 (US$ 100)",
       "Half Day: US$ 40 / 5 Hours",
@@ -43,7 +40,8 @@ export const listCars = [
   },
   {
     name: "Toyota Avanza",
-    imageUrl: avanza,
+    imageUrl:
+      "https://ipfs.io/ipfs/QmR5U1q9sQngoHUoigBfYkJb173GeabptyoUW7GbRSeSD2/avanza.svg",
     services: [
       "IDR 700.000 (US$ 45)",
       "Half Day: US$ 23 / 5 Hours",
@@ -55,7 +53,8 @@ export const listCars = [
   },
   {
     name: "Daihatsu Xenia",
-    imageUrl: xenia,
+    imageUrl:
+      "https://ipfs.io/ipfs/QmR5U1q9sQngoHUoigBfYkJb173GeabptyoUW7GbRSeSD2/xenia.svg",
     services: [
       "IDR 700.000 (US$ 45)",
       "Half Day: US$ 23 / 5 Hours",

@@ -33,6 +33,11 @@ const About = () => {
     }
   };
 
+  const imageLoader = ({ src, width, quality }) => {
+    console.log("calling image loader", src, width, quality);
+    return `${src}?w=${width}&q=${quality || 75}`;
+  };
+
   useEffect(() => {
     const text = `Halo saya mau pesan paket ${imageSlider[imageIndex].name}, apakah bisa?`;
     setDesText(text);
@@ -63,14 +68,16 @@ const About = () => {
           </Box>
           <Box className={styles[`image-slider`]}>
             <Image
+              // loader={imageLoader}
               src={imageSlider[imageIndex].imgUrl}
               alt={imageSlider[imageIndex].name}
               fill
-              sizes="100vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
               style={{
                 objectFit: "cover",
               }}
               quality={100}
+              priority={true}
             />
 
             <Box className={styles[`slider-box`]}>

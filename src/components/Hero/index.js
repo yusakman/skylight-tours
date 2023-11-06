@@ -1,7 +1,6 @@
 import { sriracha } from "@/fonts/fonts";
 import styles from "./styles.module.scss";
 import Image from "next/image";
-import heroImage from "../../assets/Hero_Banner.svg";
 import arrow from "../../assets/Arrow.svg";
 import Link from "next/link";
 
@@ -10,7 +9,7 @@ const Hero = () => {
     <div
       className={styles.hero}
       style={{
-        backgroundImage: `url(${heroImage.src})`,
+        backgroundImage: `url(https://ipfs.io/ipfs/QmRVyJoH2r2yRXUHRC585jNacqU1gCU4oyaGok8o4rzg6Y)`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",

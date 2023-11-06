@@ -15,7 +15,7 @@ const Services = () => {
         {listCars.map((item, index) => (
           <div className={styles.cars} key={index}>
             <div className={styles.carImage}>
-              <Image src={item.imageUrl} alt={item.name} width={347} />
+              <Image src={item.imageUrl} alt={item.name} width={347} height={248}/>
             </div>
             <div className={styles.carDesc}>
               <p className={styles[`desc-title`]}>{item.name}</p>
