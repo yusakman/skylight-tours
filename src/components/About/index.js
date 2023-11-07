@@ -76,7 +76,7 @@ const About = () => {
               style={{
                 objectFit: "cover",
               }}
-              quality={100}
+              quality={80}
               priority={true}
             />
 

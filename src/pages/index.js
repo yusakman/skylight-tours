@@ -1,10 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import Hero from "@/components/Hero";
-import Header from "@/components/Header";
 import Services from "@/components/Services";
 import About from "@/components/About";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -19,11 +17,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Header />
         <Hero />
         <Services />
         <About />
-        <Footer />
       </main>
     </>
   );
