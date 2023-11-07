@@ -19,7 +19,7 @@ const Hero = () => {
           src={`https://ipfs.io/ipfs/QmRVyJoH2r2yRXUHRC585jNacqU1gCU4oyaGok8o4rzg6Y`}
           alt={`Hero Image`}
           fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           style={{
             objectFit: "cover",
           }}

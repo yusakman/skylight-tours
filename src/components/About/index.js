@@ -72,12 +72,11 @@ const About = () => {
               src={imageSlider[imageIndex].imgUrl}
               alt={imageSlider[imageIndex].name}
               fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 55vw, 33vw"
               style={{
                 objectFit: "cover",
               }}
               quality={80}
-              priority={true}
             />
 
             <Box className={styles[`slider-box`]}>
