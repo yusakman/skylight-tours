@@ -71,12 +71,16 @@ const About = () => {
               // loader={imageLoader}
               src={imageSlider[imageIndex].imgUrl}
               alt={imageSlider[imageIndex].name}
-              fill
+              // fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 55vw, 33vw"
               style={{
                 objectFit: "cover",
+                alignContent: "center",
               }}
+              fill
               quality={80}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM02Xq+HgAFFgI5MkEGswAAAABJRU5ErkJggg=="
             />
 
             <Box className={styles[`slider-box`]}>

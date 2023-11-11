@@ -9,31 +9,56 @@ export const imageSlider = [
   {
     name: "Beach",
     imgUrl:
-      "https://ipfs.io/ipfs/QmTbsrzFQ2bfkUuB2bsqCCANPTNjwcw8RqwFuLjUBRWt8E/1.jpg",
-  },
-  {
-    name: "Keccak",
-    imgUrl:
-      "https://ipfs.io/ipfs/QmTbsrzFQ2bfkUuB2bsqCCANPTNjwcw8RqwFuLjUBRWt8E/2.jpg",
-  },
-  {
-    name: "Sailing",
-    imgUrl:
-      "https://ipfs.io/ipfs/QmTbsrzFQ2bfkUuB2bsqCCANPTNjwcw8RqwFuLjUBRWt8E/3.jpg",
-  },
-  {
-    name: "Waterfal",
-    imgUrl:
-      "https://ipfs.io/ipfs/QmTbsrzFQ2bfkUuB2bsqCCANPTNjwcw8RqwFuLjUBRWt8E/4.jpg",
-  },
-  {
-    name: "Temple",
-    imgUrl:
-      "https://ipfs.io/ipfs/QmTbsrzFQ2bfkUuB2bsqCCANPTNjwcw8RqwFuLjUBRWt8E/5.jpg",
+      "https://ipfs.io/ipfs/QmaD4VSSozQLDSeBVy6bfvXKHSaANKq3MEHUz8DnM3Lyo1/1.jpg",
   },
   {
     name: "Sunset",
     imgUrl:
-      "https://ipfs.io/ipfs/QmTbsrzFQ2bfkUuB2bsqCCANPTNjwcw8RqwFuLjUBRWt8E/6.jpg",
+      "https://ipfs.io/ipfs/QmaD4VSSozQLDSeBVy6bfvXKHSaANKq3MEHUz8DnM3Lyo1/2.jpg",
+  },
+  {
+    name: "Temple",
+    imgUrl:
+      "https://ipfs.io/ipfs/QmaD4VSSozQLDSeBVy6bfvXKHSaANKq3MEHUz8DnM3Lyo1/3.jpg",
+  },
+  {
+    name: "Rafting",
+    imgUrl:
+      "https://ipfs.io/ipfs/QmaD4VSSozQLDSeBVy6bfvXKHSaANKq3MEHUz8DnM3Lyo1/4.jpg",
+  },
+  {
+    name: "Water Sport",
+    imgUrl:
+      "https://ipfs.io/ipfs/QmaD4VSSozQLDSeBVy6bfvXKHSaANKq3MEHUz8DnM3Lyo1/5.jpg",
+  },
+  {
+    name: "ATV",
+    imgUrl:
+      "https://ipfs.io/ipfs/QmaD4VSSozQLDSeBVy6bfvXKHSaANKq3MEHUz8DnM3Lyo1/6.jpg",
+  },
+  {
+    name: "Bali Swing",
+    imgUrl:
+      "https://ipfs.io/ipfs/QmaD4VSSozQLDSeBVy6bfvXKHSaANKq3MEHUz8DnM3Lyo1/7.jpg",
+  },
+  {
+    name: "Kecak Dance",
+    imgUrl:
+      "https://ipfs.io/ipfs/QmaD4VSSozQLDSeBVy6bfvXKHSaANKq3MEHUz8DnM3Lyo1/8.jpg",
+  },
+  {
+    name: "Waterfal",
+    imgUrl:
+      "https://ipfs.io/ipfs/QmaD4VSSozQLDSeBVy6bfvXKHSaANKq3MEHUz8DnM3Lyo1/9.jpg",
+  },
+  {
+    name: "Nusa Penida",
+    imgUrl:
+      "https://ipfs.io/ipfs/QmaD4VSSozQLDSeBVy6bfvXKHSaANKq3MEHUz8DnM3Lyo1/10.jpg",
+  },
+  {
+    name: "Rice Terrace",
+    imgUrl:
+      "https://ipfs.io/ipfs/QmaD4VSSozQLDSeBVy6bfvXKHSaANKq3MEHUz8DnM3Lyo1/11.jpg",
   },
 ];

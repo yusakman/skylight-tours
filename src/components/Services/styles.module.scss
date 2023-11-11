@@ -3,21 +3,28 @@
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
 
-    h1 {
-        color: #34B5CF;
-    }
+  h1 {
+    color: #34b5cf;
+  }
 
-    .services-text {
-        font-size: larger;
-        font-weight: 400;
-    }
+  .services-text {
+    font-size: larger;
+    font-weight: 400;
+  }
 
   .listCars {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 0 30px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
 
     .cars {
       display: flex;
@@ -27,7 +34,7 @@
       margin-top: 10px;
 
       .carDesc {
-        background-color: #34B5CF;
+        background-color: #34b5cf;
         border-radius: 5px;
         color: #fff;
         display: flex;
@@ -38,20 +45,84 @@
         height: 380px;
 
         .desc-title {
-            font-size: larger;
-            font-weight: 500;
+          font-size: larger;
+          font-weight: 500;
         }
 
         .desc-text {
-            margin: 10px 0;
+          margin: 10px 0;
         }
       }
 
       .button-car {
         margin-top: 15px;
-        background-color: #34B5CF;
+        background-color: #34b5cf;
         width: 250px;
         border-radius: 35px;
+      }
+    }
+  }
+
+  .mobile-slider {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mobile-slider-content {
+      display: flex;
+
+      .cars {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .carDesc {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          font-size: 15px;
+          width: 242px;
+          font-weight: 400;
+          line-height: 10px;
+          margin: 10px 0;
+
+          .desc-title {
+            font-size: larger;
+            font-weight: 500;
+          }
+        }
+
+        button {
+          background-color: #34b5cf;
+          color: #ffffff;
+          margin: 20px 0;
+          border-radius: 35px;
+          width: 150px;
+        }
+      }
+
+      .circle-container {
+        display: flex;
+        margin: 10px 0;
+        .circle {
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          border: 3px solid #34b5cf;
+          background-color: #fff;
+          margin: 10px;
+        }
+
+        .circle-bg {
+          background-color: #34b5cf;
+        }
       }
     }
   }

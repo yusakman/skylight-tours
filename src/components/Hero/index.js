@@ -15,7 +15,6 @@ const Hero = () => {
     <div className={styles.hero} id="home">
       <Box className={styles[`image-container`]}>
         <Image
-          // loader={imageLoader}
           src={`https://ipfs.io/ipfs/QmRVyJoH2r2yRXUHRC585jNacqU1gCU4oyaGok8o4rzg6Y`}
           alt={`Hero Image`}
           fill
@@ -24,7 +23,6 @@ const Hero = () => {
             objectFit: "cover",
           }}
           quality={80}
-          priority={true}
         />
         <Box className={`${sriracha.className} ${styles[`hero-text`]}`}>
           <h1>Skylight Tours</h1>

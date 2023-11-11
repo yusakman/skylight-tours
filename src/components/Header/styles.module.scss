@@ -79,6 +79,11 @@
         p {
           font-size: 16px;
           font-weight: 400;
+          text-decoration: none;
+        }
+
+        p:hover {
+          color: #b9e6f1;
         }
       }
     }
@@ -101,5 +106,4 @@
 .header-bg {
   background: linear-gradient(270deg, #11505d 3.38%, #307b8c 93.25%);
   box-shadow: 0 0 5px 5px rgba($color: #000000, $alpha: 0.05);
-  
 }
