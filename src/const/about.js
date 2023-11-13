@@ -47,7 +47,7 @@ export const imageSlider = [
       "https://ipfs.io/ipfs/QmaD4VSSozQLDSeBVy6bfvXKHSaANKq3MEHUz8DnM3Lyo1/8.jpg",
   },
   {
-    name: "Waterfal",
+    name: "Waterfall",
     imgUrl:
       "https://ipfs.io/ipfs/QmaD4VSSozQLDSeBVy6bfvXKHSaANKq3MEHUz8DnM3Lyo1/9.jpg",
   },
