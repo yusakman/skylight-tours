@@ -9,12 +9,13 @@ import KayakingIcon from "@mui/icons-material/Kayaking";
 import { useEffect, useState } from "react";
 import useIsMounted from "@/hooks";
 import { phoneNumber } from "@/const";
+import CoreButton from "../Button";
 
 const About = () => {
   const mounted = useIsMounted();
   const [imageIndex, setImageIndex] = useState(0);
   const [destText, setDesText] = useState(
-    `Halo saya mau pesan paket ${imageSlider[imageIndex].name}, apakah bisa?`
+    `Hello I want to ask about this package ${imageSlider[imageIndex].name}?`
   );
 
   const nextImg = () => {
@@ -39,7 +40,7 @@ const About = () => {
   };
 
   useEffect(() => {
-    const text = `Halo saya mau pesan paket ${imageSlider[imageIndex].name}, apakah bisa?`;
+    const text = `Hello I want to ask about this package ${imageSlider[imageIndex].name}?`;
     setDesText(text);
   }, [imageIndex]);
 
@@ -56,7 +57,7 @@ const About = () => {
               ))}
             </div>
 
-            <Button variant="contained" className={styles[`about-button`]}>
+            {/* <Button variant="contained" className={styles[`about-button`]}>
               <Link
                 href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=Halo Skylight Tours, apakah masih available?`}
                 rel="noopener noreferrer"
@@ -64,7 +65,8 @@ const About = () => {
               >
                 Book Now
               </Link>
-            </Button>
+            </Button> */}
+            <CoreButton text={`services`} nav={`about`} />
           </Box>
           <Box className={styles[`image-slider`]}>
             <Image
@@ -110,7 +112,7 @@ const About = () => {
                   onClick={nextImg}
                 />
               </div>
-              <Button variant="contained" className={styles[`slider-button`]}>
+              {/* <Button variant="contained" className={styles[`slider-button`]}>
                 <Link
                   href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${destText}`}
                   rel="noopener noreferrer"
@@ -118,7 +120,8 @@ const About = () => {
                 >
                   Book Now
                 </Link>
-              </Button>
+              </Button> */}
+              <CoreButton text={imageSlider[imageIndex].name} nav={`slider`} />
             </Box>
           </Box>
         </>

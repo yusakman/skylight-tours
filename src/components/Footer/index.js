@@ -25,7 +25,7 @@ const Footer = () => {
         Contact us at skylight at gmail.com
       </p>
       <Link
-        href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=Halo Skylight Tours, apakah masih available?`}
+        href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=Halo Skylight Tours, which packages are available?`}
         rel="noopener noreferrer"
         target="_blank"
       >

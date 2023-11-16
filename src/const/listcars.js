@@ -1,8 +1,10 @@
+import new_avanza from "@/assets/new_avanza.svg";
+import new_innova from "@/assets/new_innova.svg";
+
 export const listCars = [
   {
     name: "Toyota Avanza",
-    imageUrl:
-      "https://ipfs.io/ipfs/QmR5U1q9sQngoHUoigBfYkJb173GeabptyoUW7GbRSeSD2/avanza.svg",
+    imageUrl: new_avanza,
     services: [
       "IDR 700.000 (US$ 45)",
       "Half Day: US$ 23 / 5 Hours",
@@ -27,8 +29,7 @@ export const listCars = [
   },
   {
     name: "Toyota Innova",
-    imageUrl:
-      "https://ipfs.io/ipfs/QmR5U1q9sQngoHUoigBfYkJb173GeabptyoUW7GbRSeSD2/innova.svg",
+    imageUrl: new_innova,
     services: [
       "IDR 1.000.000 (US$ 100)",
       "Half Day: US$ 40 / 5 Hours",

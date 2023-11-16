@@ -7,6 +7,7 @@ import { phoneNumber } from "@/const";
 import { useEffect, useState } from "react";
 import iconLeft from "@/assets/PaperPlaneLeftMobile.svg";
 import iconRight from "@/assets/PaperPlaneRightMobile.svg";
+import CoreButton from "../Button";
 
 const Services = () => {
   const [imageIndex, setImageIndex] = useState(0);
@@ -51,7 +52,6 @@ const Services = () => {
   };
 
   useEffect(() => {
-    console.log("imageIndex", imageIndex);
     const autoPlay = () => {
       if (imageIndex === listCars.length - 1) {
         setImageIndex(0);
@@ -98,7 +98,7 @@ const Services = () => {
                 </p>
               ))}
             </div>
-            <Button variant="contained" className={styles[`button-car`]}>
+            {/* <Button variant="contained" className={styles[`button-car`]}>
               <Link
                 href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=Halo saya mau pesan ${item.name}, apakah ada?`}
                 rel="noopener noreferrer"
@@ -106,7 +106,8 @@ const Services = () => {
               >
                 Book Now
               </Link>
-            </Button>
+            </Button> */}
+            <CoreButton name={item.name} nav={"services"} />
           </div>
         ))}
       </div>
@@ -144,7 +145,7 @@ const Services = () => {
                 </p>
               ))}
             </div>
-            <Button variant="contained" className={styles[`button-car`]}>
+            {/* <Button variant="contained" className={styles[`button-car`]}>
               <Link
                 href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=Halo saya mau pesan ${listCars[imageIndex].name}, apakah ada?`}
                 rel="noopener noreferrer"
@@ -152,7 +153,8 @@ const Services = () => {
               >
                 Book Now
               </Link>
-            </Button>
+            </Button> */}
+            <CoreButton name={listCars[imageIndex].name} nav={"services"} />
             <div className={styles[`circle-container`]}>{circle()}</div>
           </div>
         </div>
