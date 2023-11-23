@@ -9,7 +9,7 @@ import KayakingIcon from "@mui/icons-material/Kayaking";
 import { useEffect, useState } from "react";
 import useIsMounted from "@/hooks";
 import { phoneNumber } from "@/const";
-import CoreButton from "../Button";
+import CoreButton from "../CoreButton";
 
 const About = () => {
   const mounted = useIsMounted();
@@ -66,7 +66,9 @@ const About = () => {
                 Book Now
               </Link>
             </Button> */}
-            <CoreButton text={`services`} nav={`about`} />
+            <div className={styles[`about-button`]}>
+              <CoreButton text={`services`} />
+            </div>
           </Box>
           <Box className={styles[`image-slider`]}>
             <Image
@@ -121,7 +123,9 @@ const About = () => {
                   Book Now
                 </Link>
               </Button> */}
-              <CoreButton text={imageSlider[imageIndex].name} nav={`slider`} />
+              <div className={styles[`slider-button`]}>
+                <CoreButton text={imageSlider[imageIndex].name} />
+              </div>
             </Box>
           </Box>
         </>

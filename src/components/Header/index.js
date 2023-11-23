@@ -4,8 +4,10 @@ import styles from "./styles.module.scss";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { useEffect, useState } from "react";
+import useIsMounted from "@/hooks";
 
 const Header = () => {
+  const isMounted = useIsMounted();
   const [showNav, setShowNav] = useState(false);
   const [newBg, setNewBg] = useState(``);
 
@@ -47,33 +49,35 @@ const Header = () => {
 
   return (
     <div className={`${styles.header} ${styles[newBg]}`}>
-      <div className={styles.container}>
-        <div className={`${sriracha.className} ${styles.logo}`}>
-          <h1>Skylight</h1>
-        </div>
-        <nav className={showNav ? styles.show : ""}>
-          <CloseIcon
-            className={styles.close}
-            onClick={() => setShowNav(!showNav)}
-          />
-          {menu.map((item, index) => (
-            <Link
-              key={index}
-              href={item.url}
+      {isMounted && (
+        <div className={styles.container}>
+          <div className={`${sriracha.className} ${styles.logo}`}>
+            <h1>Skylight</h1>
+          </div>
+          <nav className={showNav ? styles.show : ""}>
+            <CloseIcon
+              className={styles.close}
               onClick={() => setShowNav(!showNav)}
-              scroll={false}
-            >
-              <p>{item.label}</p>
-            </Link>
-          ))}
-        </nav>
-        <div className={styles["nav-mobile"]}>
-          <MenuIcon
-            className={styles.hamburger}
-            onClick={() => setShowNav(!showNav)}
-          />
+            />
+            {menu.map((item, index) => (
+              <Link
+                key={index}
+                href={item.url}
+                onClick={() => setShowNav(!showNav)}
+                scroll={false}
+              >
+                <p>{item.label}</p>
+              </Link>
+            ))}
+          </nav>
+          <div className={styles["nav-mobile"]}>
+            <MenuIcon
+              className={styles.hamburger}
+              onClick={() => setShowNav(!showNav)}
+            />
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

@@ -7,9 +7,11 @@ import { phoneNumber } from "@/const";
 import { useEffect, useState } from "react";
 import iconLeft from "@/assets/PaperPlaneLeftMobile.svg";
 import iconRight from "@/assets/PaperPlaneRightMobile.svg";
-import CoreButton from "../Button";
+import CoreButton from "../CoreButton";
+import useIsMounted from "@/hooks";
 
 const Services = () => {
+  const isMounted = useIsMounted();
   const [imageIndex, setImageIndex] = useState(0);
   const [isAutoplay, setIsAutoplay] = useState(true);
 
@@ -73,101 +75,112 @@ const Services = () => {
 
   return (
     <div className={styles.services} id="services">
-      <h1>Services</h1>
-      <p className={styles[`services-text`]}>Tour With Professional Driver</p>
-      <div className={styles.listCars}>
-        {listCars.map((item, index) => (
-          <div className={styles.cars} key={index}>
-            <div className={styles.carImage}>
-              <Image
-                src={item.imageUrl}
-                alt={item.name}
-                width={347}
-                height={248}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                quality={50}
-                placeholder="blur"
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM02Xq+HgAFFgI5MkEGswAAAABJRU5ErkJggg=="
-              />
-            </div>
-            <div className={styles.carDesc}>
-              <p className={styles[`desc-title`]}>{item.name}</p>
-              {item.services.map((text, idx) => (
-                <p key={idx} className={styles[`desc-text`]}>
-                  {text}
-                </p>
-              ))}
-            </div>
-            {/* <Button variant="contained" className={styles[`button-car`]}>
-              <Link
-                href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=Halo saya mau pesan ${item.name}, apakah ada?`}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Book Now
-              </Link>
-            </Button> */}
-            <CoreButton name={item.name} nav={"services"} />
+      {isMounted && (
+        <>
+          <h1>Services</h1>
+          <p className={styles[`services-text`]}>
+            Tour With Professional Driver
+          </p>
+          <div className={styles.listCars}>
+            {listCars.map((item, index) => (
+              <div className={styles.cars} key={index}>
+                <div className={styles.carImage}>
+                  <Image
+                    src={item.imageUrl}
+                    alt={item.name}
+                    width={347}
+                    height={248}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    quality={50}
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM02Xq+HgAFFgI5MkEGswAAAABJRU5ErkJggg=="
+                  />
+                </div>
+                <div className={styles.carDesc}>
+                  <p className={styles[`desc-title`]}>{item.name}</p>
+                  {item.services.map((text, idx) => (
+                    <p key={idx} className={styles[`desc-text`]}>
+                      {text}
+                    </p>
+                  ))}
+                </div>
+                {/* <Button variant="contained" className={styles[`button-car`]}>
+                <Link
+                  href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=Halo saya mau pesan ${item.name}, apakah ada?`}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Book Now
+                </Link>
+              </Button> */}
+                <div className={styles[`services-button`]}>
+                  <CoreButton text={item.name} />
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-      <div className={styles[`mobile-slider`]}>
-        <Image
-          className={styles[`slider-icon`]}
-          src={iconLeft}
-          alt="icon-left"
-          width={35}
-          height={35}
-          quality={100}
-          onClick={prevImage}
-        />
-        <div className={styles[`mobile-slider-content`]}>
-          <div className={styles.cars}>
-            <div className={styles.carImage}>
-              <Image
-                src={listCars[imageIndex].imageUrl}
-                alt={listCars[imageIndex].name}
-                width={241}
-                height={172}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                quality={50}
-                placeholder="blur"
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM02Xq+HgAFFgI5MkEGswAAAABJRU5ErkJggg=="
-              />
+          <div className={styles[`mobile-slider`]}>
+            <Image
+              className={styles[`slider-icon`]}
+              src={iconLeft}
+              alt="icon-left"
+              width={35}
+              height={35}
+              quality={100}
+              onClick={prevImage}
+            />
+            <div className={styles[`mobile-slider-content`]}>
+              <div className={styles.cars}>
+                <div className={styles.carImage}>
+                  <Image
+                    src={listCars[imageIndex].imageUrl}
+                    alt={listCars[imageIndex].name}
+                    width={241}
+                    height={172}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    quality={50}
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM02Xq+HgAFFgI5MkEGswAAAABJRU5ErkJggg=="
+                  />
+                </div>
+                <div className={styles.carDesc}>
+                  <p className={styles[`desc-title`]}>
+                    {listCars[imageIndex].name}
+                  </p>
+                  {listCars[imageIndex].services.map((text, idx) => (
+                    <p key={idx} className={styles[`desc-text`]}>
+                      {text}
+                    </p>
+                  ))}
+                </div>
+                {/* <Button variant="contained" className={styles[`button-car`]}>
+                <Link
+                  href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=Halo saya mau pesan ${listCars[imageIndex].name}, apakah ada?`}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Book Now
+                </Link>
+              </Button> */}
+                <div className={styles[`services-button`]}>
+                  <CoreButton text={listCars[imageIndex].name} />
+                </div>
+
+                <div className={styles[`circle-container`]}>{circle()}</div>
+              </div>
             </div>
-            <div className={styles.carDesc}>
-              <p className={styles[`desc-title`]}>
-                {listCars[imageIndex].name}
-              </p>
-              {listCars[imageIndex].services.map((text, idx) => (
-                <p key={idx} className={styles[`desc-text`]}>
-                  {text}
-                </p>
-              ))}
-            </div>
-            {/* <Button variant="contained" className={styles[`button-car`]}>
-              <Link
-                href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=Halo saya mau pesan ${listCars[imageIndex].name}, apakah ada?`}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Book Now
-              </Link>
-            </Button> */}
-            <CoreButton name={listCars[imageIndex].name} nav={"services"} />
-            <div className={styles[`circle-container`]}>{circle()}</div>
+            <Image
+              className={styles[`slider-icon`]}
+              src={iconRight}
+              alt="icon-right"
+              width={35}
+              height={35}
+              quality={100}
+              onClick={nextImage}
+            />
           </div>
-        </div>
-        <Image
-          className={styles[`slider-icon`]}
-          src={iconRight}
-          alt="icon-right"
-          width={35}
-          height={35}
-          quality={100}
-          onClick={nextImage}
-        />
-      </div>
+        </>
+      )}
     </div>
   );
 };
