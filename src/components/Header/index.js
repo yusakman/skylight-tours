@@ -5,6 +5,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { useEffect, useState } from "react";
 import useIsMounted from "@/hooks";
+import logoIcon from "@/assets/logo-skylight.png";
+import Image from "next/image";
 
 const Header = ({ setHeader }) => {
   const isMounted = useIsMounted();
@@ -56,7 +58,22 @@ const Header = ({ setHeader }) => {
       {isMounted && (
         <div className={styles.container}>
           <div className={`${sriracha.className} ${styles.logo}`}>
-            <Link href={"/"} scroll={false}>
+            <Link
+              href={"/"}
+              scroll={false}
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+              }}
+            >
+              <Image
+                src={logoIcon}
+                alt="right"
+                width={60}
+                height={60}
+                quality={100}
+              />
               <h1>Skylight</h1>
             </Link>
           </div>

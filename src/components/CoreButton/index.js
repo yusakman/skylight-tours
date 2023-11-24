@@ -14,7 +14,7 @@ const CoreButton = ({ text }) => {
     <>
       {isMounted && (
         <Link
-          href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=Hello tehere, is this package ${text} available?`}
+          href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=Hello there, is this package ${text} available?`}
           rel="noopener noreferrer"
           target="_blank"
         >
