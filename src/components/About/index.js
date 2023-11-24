@@ -72,7 +72,7 @@ const About = () => {
 
             <Box className={styles[`slider-box`]}>
               <div className={styles[`slider-title`]} id="destination">
-                <p>Choose Your Destination</p>
+                <p>More Destination</p>
               </div>
               <div className={styles[`slider-content`]}>
                 <Image

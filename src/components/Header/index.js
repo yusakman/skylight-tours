@@ -56,7 +56,9 @@ const Header = ({ setHeader }) => {
       {isMounted && (
         <div className={styles.container}>
           <div className={`${sriracha.className} ${styles.logo}`}>
-            <h1>Skylight</h1>
+            <Link href={"/"} scroll={false}>
+              <h1>Skylight</h1>
+            </Link>
           </div>
           <nav className={showNav ? styles.show : ""}>
             <CloseIcon

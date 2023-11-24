@@ -32,7 +32,7 @@ const Packages = () => {
                         alignContent: "center",
                       }}
                       fill
-                      quality={50}
+                      quality={80}
                       placeholder="blur"
                       blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM02Xq+HgAFFgI5MkEGswAAAABJRU5ErkJggg=="
                     />
