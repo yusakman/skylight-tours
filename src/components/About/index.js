@@ -34,11 +34,6 @@ const About = () => {
     }
   };
 
-  const imageLoader = ({ src, width, quality }) => {
-    console.log("calling image loader", src, width, quality);
-    return `${src}?w=${width}&q=${quality || 75}`;
-  };
-
   useEffect(() => {
     const text = `Hello I want to ask about this package ${imageSlider[imageIndex].name}?`;
     setDesText(text);
@@ -56,26 +51,14 @@ const About = () => {
                 <p key={index}>{item}</p>
               ))}
             </div>
-
-            {/* <Button variant="contained" className={styles[`about-button`]}>
-              <Link
-                href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=Halo Skylight Tours, apakah masih available?`}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Book Now
-              </Link>
-            </Button> */}
             <div className={styles[`about-button`]}>
               <CoreButton text={`services`} />
             </div>
           </Box>
           <Box className={styles[`image-slider`]}>
             <Image
-              // loader={imageLoader}
               src={imageSlider[imageIndex].imgUrl}
               alt={imageSlider[imageIndex].name}
-              // fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 55vw, 33vw"
               style={{
                 objectFit: "cover",
@@ -114,15 +97,6 @@ const About = () => {
                   onClick={nextImg}
                 />
               </div>
-              {/* <Button variant="contained" className={styles[`slider-button`]}>
-                <Link
-                  href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${destText}`}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Book Now
-                </Link>
-              </Button> */}
               <div className={styles[`slider-button`]}>
                 <CoreButton text={imageSlider[imageIndex].name} />
               </div>

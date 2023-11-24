@@ -11,7 +11,7 @@ import CoreButton from "../CoreButton";
 import useIsMounted from "@/hooks";
 
 const Services = () => {
-  const isMounted = useIsMounted();
+  const mounted = useIsMounted();
   const [imageIndex, setImageIndex] = useState(0);
   const [isAutoplay, setIsAutoplay] = useState(true);
 
@@ -75,7 +75,7 @@ const Services = () => {
 
   return (
     <div className={styles.services} id="services">
-      {isMounted && (
+      {mounted && (
         <>
           <h1>Services</h1>
           <p className={styles[`services-text`]}>
@@ -104,15 +104,6 @@ const Services = () => {
                     </p>
                   ))}
                 </div>
-                {/* <Button variant="contained" className={styles[`button-car`]}>
-                <Link
-                  href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=Halo saya mau pesan ${item.name}, apakah ada?`}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Book Now
-                </Link>
-              </Button> */}
                 <div className={styles[`services-button`]}>
                   <CoreButton text={item.name} />
                 </div>
@@ -153,15 +144,6 @@ const Services = () => {
                     </p>
                   ))}
                 </div>
-                {/* <Button variant="contained" className={styles[`button-car`]}>
-                <Link
-                  href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=Halo saya mau pesan ${listCars[imageIndex].name}, apakah ada?`}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Book Now
-                </Link>
-              </Button> */}
                 <div className={styles[`services-button`]}>
                   <CoreButton text={listCars[imageIndex].name} />
                 </div>

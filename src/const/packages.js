@@ -1,3 +1,10 @@
+import image1 from "@/assets/package-1.jpg";
+import image2 from "@/assets/package-2.jpg";
+import image3 from "@/assets/package-3.jpg";
+import image4 from "@/assets/package-4.jpg";
+import image5 from "@/assets/package-5.jpg";
+import image6 from "@/assets/package-6.jpg";
+
 export const packages = [
   {
     name: "Bali South",
@@ -16,6 +23,7 @@ export const packages = [
     addition: "The itinerary can be changed according to your needs",
     extra: "Extra time 4US$/Hour",
     note: "Bring space clothes",
+    imageUrl: image1,
   },
   {
     name: "East Bali Trip",
@@ -33,6 +41,7 @@ export const packages = [
     addition: "The itinerary can be changed according to your needs",
     extra: "Extra time 4US$/Hour",
     note: "-",
+    imageUrl: image2,
   },
   {
     name: "Bedugul Trip",
@@ -50,6 +59,7 @@ export const packages = [
     addition: "The itinerary can be changed according to your needs",
     extra: "Extra time 4US$/Hour",
     note: "-",
+    imageUrl: image3,
   },
   {
     name: "Ubud Activity 2",
@@ -62,6 +72,7 @@ export const packages = [
     addition: "The itinerary can be changed according to your needs",
     extra: "Extra time 4US$/Hour",
     note: "Bring space clothes",
+    imageUrl: image4,
   },
   {
     name: "Ubud Activity",
@@ -74,6 +85,7 @@ export const packages = [
     addition: "The itinerary can be changed according to your needs",
     extra: "Extra time 4US$/Hour",
     note: "Bring space clothes",
+    imageUrl: image5,
   },
   {
     name: "Nusa Penida Tour",
@@ -94,5 +106,6 @@ export const packages = [
     addition: "The itinerary can be changed according to your needs",
     extra: "",
     note: "",
+    imageUrl: image6,
   },
 ];
