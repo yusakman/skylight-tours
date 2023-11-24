@@ -6,7 +6,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useEffect, useState } from "react";
 import useIsMounted from "@/hooks";
 
-const Header = () => {
+const Header = ({ setHeader }) => {
   const isMounted = useIsMounted();
   const [showNav, setShowNav] = useState(false);
   const [newBg, setNewBg] = useState(``);
@@ -48,7 +48,11 @@ const Header = () => {
   });
 
   return (
-    <div className={`${styles.header} ${styles[newBg]}`}>
+    <div
+      className={`${styles.header} ${
+        setHeader ? styles[`header-bg`] : styles[newBg]
+      }`}
+    >
       {isMounted && (
         <div className={styles.container}>
           <div className={`${sriracha.className} ${styles.logo}`}>
