@@ -17,7 +17,7 @@ export default function Home() {
           content="Skylight Tours is a tour and travel company in Bali"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/ico.png" />
       </Head>
       <main>
         <Header setHeader={false} />
